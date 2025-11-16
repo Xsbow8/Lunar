@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aljabar – MathLearn</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/style.css" />
+
+  <script>
+    // Halaman materi wajib login
+    document.addEventListener("DOMContentLoaded", () => {
+      requireLogin("aljabar.html");
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="shadow-md sticky top-0 bg-white z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+
+      <div class="flex items-center gap-3 logo">
+        <div class="mark">M</div>
+        <span class="text-2xl font-bold text-gray-800">MathLearn</span>
+      </div>
+
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html">Beranda</a>
+
+        <div class="relative group">
+          <button class="hover:text-blue-600">Materi ▾</button>
+          <div class="absolute left-0 top-full mt-2 bg-white rounded-xl shadow-lg py-2
+                      hidden group-hover:block w-56 z-50">
+            <a href="aljabar.html" class="block px-4 py-2 hover:bg-blue-50">Aljabar</a>
+            <a href="persamaan-linear.html" class="block px-4 py-2 hover:bg-blue-50">Persamaan Linear</a>
+            <a href="peluang.html" class="block px-4 py-2 hover:bg-blue-50">Peluang</a>
+          </div>
+        </div>
+
+        <a href="about.html">Tentang</a>
+      </div>
+
+      <div id="accountAreaDesktop" class="hidden md:flex items-center gap-3"></div>
+
+      <button class="md:hidden" onclick="toggleMobileMenu()">☰</button>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+      <a href="aljabar.html" class="block py-2">Aljabar</a>
+      <a href="persamaan-linear.html" class="block py-2">Persamaan Linear</a>
+      <a href="peluang.html" class="block py-2">Peluang</a>
+      <a href="about.html" class="block py-2">Tentang</a>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-5xl mx-auto px-6 py-12">
+
+    <h1 class="text-4xl font-bold text-gray-800 mb-6">Materi Aljabar</h1>
+
+    <p class="text-lg text-gray-700 leading-relaxed">
+      Aljabar adalah cabang matematika yang mempelajari simbol serta aturan untuk memanipulasi simbol tersebut.
+      Konsep ini membantu kita menyederhanakan perhitungan, mencari nilai yang belum diketahui, dan menyelesaikan
+      berbagai permasalahan matematika dengan lebih cepat dan sistematis.
+    </p>
+
+    <!-- VIDEO -->
+    <div class="my-10">
+      <h2 class="text-2xl font-bold mb-3 text-gray-800">🎥 Video Pembelajaran</h2>
+      <iframe width="100%" height="380" class="rounded-2xl shadow-lg"
+        src="https://www.youtube.com/embed/Na8s3aMu7FI" allowfullscreen></iframe>
+    </div>
+
+    <!-- PENJELASAN MATERI -->
+    <section class="mt-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">📘 Penjelasan Materi</h2>
+
+      <div class="bg-white p-6 rounded-2xl shadow-lg leading-relaxed text-gray-700">
+
+        <h3 class="text-xl font-semibold mt-4">1. Variabel</h3>
+        <p>Variabel adalah simbol (biasanya huruf seperti x atau y) yang mewakili suatu nilai yang belum diketahui.</p>
+
+        <h3 class="text-xl font-semibold mt-4">2. Konstanta</h3>
+        <p>Konstanta adalah nilai tetap yang tidak berubah, misalnya angka 2, 7, atau 10.</p>
+
+        <h3 class="text-xl font-semibold mt-4">3. Koefisien</h3>
+        <p>Koefisien adalah angka yang mengalikan variabel. Contoh: pada 5x, angka 5 adalah koefisien.</p>
+
+        <h3 class="text-xl font-semibold mt-4">4. Bentuk Aljabar</h3>
+        <p>Bentuk aljabar adalah gabungan antara variabel, konstanta, dan operasi hitung.</p>
+
+        <h3 class="text-xl font-semibold mt-4">Contoh:</h3>
+        <ul class="list-disc ml-6">
+          <li>3x + 7</li>
+          <li>2y − 4</li>
+          <li>10a + 5b</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold mt-4">5. Menyederhanakan Bentuk Aljabar</h3>
+        <p>Menggabungkan suku-suku sejenis menjadi satu.</p>
+
+        <h3 class="text-xl font-semibold mt-4">Contoh:</h3>
+        <p>3x + 5x = 8x</p>
+
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="mt-16">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">📝 Quiz Aljabar</h2>
+
+      <!-- START BUTTON -->
+      <div id="quizStart" class="quiz-start">
+        <h3 class="text-xl font-semibold">Uji pemahamanmu!</h3>
+        <p class="text-gray-600 mt-2 mb-4">Klik tombol di bawah ini untuk memulai quiz.</p>
+        <button onclick="startQuiz()"
+          class="px-6 py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700">
+          Mulai Quiz
+        </button>
+      </div>
+
+      <!-- QUIZ CONTENT -->
+      <div id="quizContent" class="quiz-content" style="display:none;">
+
+        <div class="quiz-option" data-correct="true" onclick="checkQuiz(this)">
+          5x + 3x = 8x
+        </div>
+
+        <div class="quiz-option" data-correct="false" onclick="checkQuiz(this)">
+          5x + 3x = 15x
+        </div>
+
+        <div class="quiz-option" data-correct="false" onclick="checkQuiz(this)">
+          5x + 3x = 5x³
+        </div>
+
+        <div class="quiz-option" data-correct="true" onclick="checkQuiz(this)">
+          Pada bentuk 7y, koefisiennya adalah 7
+        </div>
+
+      </div>
+
+      <!-- RESULT -->
+      <div id="quizResult">
+        <h3 class="text-2xl font-bold mb-2">Hasil Quiz</h3>
+        <p id="quizScore" class="text-lg"></p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © 2024 MathLearn — Belajar Matematika Lebih Mudah
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/app.js"></script>
+
+</body>
+</html>

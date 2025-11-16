@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MathLearn - Belajar Matematika</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loadingScreen">
+    <span class="material-symbols-outlined spin" style="font-size:64px;color:#374151;">
+      calculate
+    </span>
+    <p class="mt-4 text-gray-700 font-semibold">Memuat...</p>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+
+      <!-- LOGO -->
+      <div class="flex items-center gap-3 logo">
+        <div class="mark">M</div>
+        <span class="text-2xl font-bold text-gray-800">MathLearn</span>
+      </div>
+
+      <!-- MENU DESKTOP -->
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html">Beranda</a>
+
+        <div class="relative group">
+          <button class="hover:text-blue-600">Materi ▾</button>
+          <div class="absolute left-0 top-full mt-2 bg-white rounded-xl shadow-lg py-2
+                      hidden group-hover:block w-56 z-50">
+            <a href="aljabar.html" class="block px-4 py-2 hover:bg-blue-50">Aljabar</a>
+            <a href="persamaan-linear.html" class="block px-4 py-2 hover:bg-blue-50">Persamaan Linear</a>
+            <a href="peluang.html" class="block px-4 py-2 hover:bg-blue-50">Peluang</a>
+          </div>
+        </div>
+
+        <a href="about.html">Tentang</a>
+      </div>
+
+      <!-- ACCOUNT AREA -->
+      <div id="accountAreaDesktop" class="hidden md:flex items-center gap-3"></div>
+
+      <!-- MOBILE MENU BUTTON -->
+      <button class="md:hidden" onclick="toggleMobileMenu()">☰</button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+      <a href="aljabar.html" class="block py-2">Aljabar</a>
+      <a href="persamaan-linear.html" class="block py-2">Persamaan Linear</a>
+      <a href="peluang.html" class="block py-2">Peluang</a>
+      <a href="about.html" class="block py-2">Tentang</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500">
+    <h1>Belajar Matematika Lebih Mudah</h1>
+    <p>
+      Materi lengkap, video pembelajaran, dan quiz interaktif dalam satu platform.
+    </p>
+
+    <div class="mt-8" id="heroButtonContainer"></div>
+  </header>
+
+  <!-- RUNNING TEXT -->
+  <div class="running-text">
+    <span>✨ Selamat datang di MathLearn — Platform belajar matematika paling mudah untuk pelajar Indonesia ✨</span>
+  </div>
+
+  <!-- MATERI -->
+  <main class="max-w-7xl mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">📚 Pilih Materi</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Aljabar -->
+      <a href="aljabar.html" class="card">
+        <img src="assets/img/aljabar.jpg" class="card-img">
+        <div class="card-body">
+          <h3 class="text-xl font-bold">Aljabar Dasar</h3>
+          <p class="text-gray-600 mt-2">
+            Kenali variabel, konstanta, dan cara menyederhanakan bentuk aljabar.
+          </p>
+        </div>
+      </a>
+
+      <!-- Linear -->
+      <a href="persamaan-linear.html" class="card">
+        <img src="assets/img/linear.jpg" class="card-img">
+        <div class="card-body">
+          <h3 class="text-xl font-bold">Persamaan Linear</h3>
+          <p class="text-gray-600 mt-2">
+            Pelajari persamaan satu variabel dan metode eliminasi.
+          </p>
+        </div>
+      </a>
+
+      <!-- Peluang -->
+      <a href="peluang.html" class="card">
+        <img src="assets/img/peluang.jpg" class="card-img">
+        <div class="card-body">
+          <h3 class="text-xl font-bold">Peluang</h3>
+          <p class="text-gray-600 mt-2">
+            Memahami peluang kejadian dengan dadu, koin, dan eksperimen sederhana.
+          </p>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <!-- CONTACT WA -->
+  <section class="max-w-4xl mx-auto mt-20 mb-12">
+    <div class="contact-box">
+      <h2 class="text-2xl font-bold mb-3">
+        Ada Kendala Saat Belajar?
+      </h2>
+      <p class="text-gray-600 mb-6">
+        Kamu bisa hubungi kami lewat WhatsApp untuk pertanyaan atau bantuan belajar.
+      </p>
+      <a href="https://wa.me/688113356135"
+         class="px-8 py-3 bg-green-600 text-white font-semibold rounded-full shadow hover:bg-green-700 transition inline-block">
+        Hubungi via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2024 MathLearn — Belajar Matematika Lebih Mudah
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/app.js"></script>
+
+</body>
+</html>

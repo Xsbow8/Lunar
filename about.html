@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tentang - MathLearn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">M</div>
+        <span class="text-2xl font-bold text-gray-800">MathLearn</span>
+      </div>
+
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="hover:text-blue-600">Beranda</a>
+
+        <div class="relative group">
+          <button class="hover:text-blue-600">Materi ▾</button>
+          <div class="absolute left-0 top-full mt-2 bg-white rounded-xl shadow-lg py-2 hidden group-hover:block w-56">
+            <a href="aljabar.html" class="block px-4 py-2 hover:bg-blue-50">Aljabar</a>
+            <a href="persamaan-linear.html" class="block px-4 py-2 hover:bg-purple-50">Persamaan Linear</a>
+            <a href="peluang.html" class="block px-4 py-2 hover:bg-pink-50">Peluang</a>
+          </div>
+        </div>
+
+        <a href="about.html" class="hover:text-blue-600">Tentang</a>
+      </div>
+
+      <div id="accountAreaDesktop" class="hidden md:flex items-center gap-3"></div>
+
+      <button class="md:hidden" onclick="toggleMobileMenu()">☰</button>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+      <a href="aljabar.html" class="block py-2">Aljabar</a>
+      <a href="persamaan-linear.html" class="block py-2">Persamaan Linear</a>
+      <a href="peluang.html" class="block py-2">Peluang</a>
+      <a href="about.html" class="block py-2">Tentang</a>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold">Tentang MathLearn</h1>
+    <p class="text-blue-100 mt-4 text-lg">Platform belajar matematika interaktif untuk semua pelajar</p>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-12">
+
+    <!-- ABOUT CONTENT -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">📘 Apa itu MathLearn?</h2>
+
+      <div class="bg-white p-8 rounded-2xl shadow leading-relaxed text-gray-700">
+        <p class="mb-4">
+          <b>MathLearn</b> adalah website pembelajaran matematika yang dibuat untuk membantu pelajar memahami materi
+          dasar dengan lebih mudah dan menyenangkan. Website ini menyediakan materi yang lengkap, video pembelajaran,
+          hingga quiz interaktif.
+        </p>
+
+        <p class="mb-4">
+          Semua halaman materi memiliki penjelasan yang terstruktur, mudah dipahami, dan dilengkapi soal-soal contoh
+          serta latihan untuk menguji kemampuanmu.
+        </p>
+
+        <p>
+          Tujuan utama MathLearn adalah membuat proses belajar matematika menjadi <b>lebih mudah, cepat, dan efektif</b>.
+        </p>
+      </div>
+    </section>
+
+    <!-- FITUR -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">✨ Fitur MathLearn</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-white p-6 rounded-2xl shadow text-center">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Materi Lengkap</h3>
+          <p class="text-gray-600">Aljabar, Persamaan Linear, dan Peluang dijelaskan secara mendalam dan mudah dipahami.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow text-center">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Video Pembelajaran</h3>
+          <p class="text-gray-600">Setiap materi dilengkapi video YouTube untuk mempermudah pemahaman.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow text-center">
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Quiz Interaktif</h3>
+          <p class="text-gray-600">Uji kemampuanmu dengan soal interaktif setelah mempelajari materi.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER CARD -->
+    <section class="mt-16 text-center">
+      <div class="bg-blue-600 text-white p-8 rounded-2xl shadow-lg inline-block">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">Siap Mulai Belajar?</h2>
+
+        <a href="aljabar.html"
+          class="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold shadow hover:bg-blue-50 transition">
+          Mulai dari Aljabar
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="text-center py-6 bg-gray-900 text-white mt-12">
+    © 2024 MathLearn — Belajar Matematika Lebih Mudah
+  </footer>
+
+  <script src="assets/app.js"></script>
+
+  <script>
+    function toggleMobileMenu() {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    }
+  </script>
+
+</body>
+</html>

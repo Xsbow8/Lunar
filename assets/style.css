@@ -1,0 +1,230 @@
+/* ====================================================
+   MathLearn - style.css (FINAL TANPA DARK MODE)
+   Semua styling utama website multipage
+   ==================================================== */
+
+/* ---------- Reset ---------- */
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ---------- Container ---------- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* ---------- Navbar ---------- */
+nav {
+  background: #ffffff;
+}
+nav a {
+  color: #1f2937;
+  font-weight: 500;
+}
+nav .logo .mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: #2563eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Dropdown fix */
+.group:hover .group-hover\:block {
+  display: block !important;
+}
+
+/* Mobile menu */
+#mobileMenu a {
+  display: block;
+  padding: 0.6rem 0;
+  color: #374151;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 4.5rem 1rem;
+  color: white;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.hero p {
+  max-width: 600px;
+  margin: 0.75rem auto 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: .25s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+.card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.card-body {
+  padding: 1.3rem;
+}
+
+/* ---------- Contact Box ---------- */
+.contact-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ---------- Running Text ---------- */
+.running-text {
+  white-space: nowrap;
+  overflow: hidden;
+  background: white;
+  padding: 0.6rem 1rem;
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,0.03);
+}
+.running-text span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: runtext 13s linear infinite;
+  font-weight: 600;
+}
+@keyframes runtext {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+/* ---------- Loading Screen ---------- */
+#loadingScreen {
+  position: fixed;
+  inset: 0;
+  background: white;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+}
+#loadingScreen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.spin {
+  animation: spinCalc 1.1s linear infinite;
+}
+@keyframes spinCalc {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- Quiz ---------- */
+.quiz-start {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.quiz-option {
+  padding: 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: .2s;
+  background: white;
+}
+.quiz-option:hover {
+  background: #f3f4ff;
+  border-color: #6366f1;
+}
+.quiz-option.correct {
+  background: #dcfce7 !important;
+  border-color: #16a34a !important;
+}
+.quiz-option.wrong {
+  background: #fee2e2 !important;
+  border-color: #dc2626 !important;
+}
+.quiz-option.answered {
+  opacity: .95;
+  pointer-events: none;
+}
+
+#quizResult {
+  display: none;
+  background: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: .9rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  text-align: center;
+}
+#quizResult.show {
+  display: block;
+}
+
+/* ---------- Form (Register/Login) ---------- */
+.form-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.form-box input {
+  width: 100%;
+  padding: .85rem 1rem;
+  border-radius: .75rem;
+  border: 1px solid #d1d5db;
+  margin-top: 12px;
+  transition: .15s;
+}
+.form-box input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 5px 18px rgba(99,102,241,0.15);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 1.25rem 0;
+  margin-top: 2rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .card-img { height: 130px; }
+}
